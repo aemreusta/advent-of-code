@@ -1,5 +1,5 @@
 #Reading file
-with open(".\Inputs\day6.txt") as f:
+with open(r"advent_of_code\src\2021\Inputs\day6.txt") as f:
     data = [line.strip() for line in f.readlines()]
 f.close()
 
