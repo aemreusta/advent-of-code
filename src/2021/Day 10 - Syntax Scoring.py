@@ -1,9 +1,9 @@
-#Reading file
+# Reading file
 with open(r"advent_of_code\src\2021\Inputs\day10.txt") as f:
     data = [line.strip() for line in f.readlines()]
 f.close()
 
-#Part 1 Solution
+# Part 1 Solution
 POINTS = {")": 3, "]": 57, "}": 1197, ">": 25137}
 corrupted_lines = {}
 
@@ -37,9 +37,9 @@ for chx in corrupted_lines.values():
     score += POINTS.get(chx)
 
 print(score)
-#341823
+# 341823
 
-#Part 2 Solution
+# Part 2 Solution
 for idx in reversed(corrupted_lines.keys()):
     data.pop(idx)
 
@@ -62,20 +62,20 @@ for line in data:
     for chx in reversed(tmp_stack):
 
         if chx == "(":
-            score = score*5 + 1        
+            score = score * 5 + 1
 
         elif chx == "[":
-            score = score*5 + 2
+            score = score * 5 + 2
 
         elif chx == "{":
-            score = score*5 + 3
+            score = score * 5 + 3
 
         elif chx == "<":
-            score = score*5 + 4
+            score = score * 5 + 4
 
     scores.append(score)
 
 scores.sort()
-idx = len(scores)//2
+idx = len(scores) // 2
 print(scores[idx])
-#2801302861
+# 2801302861
