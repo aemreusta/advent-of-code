@@ -67,8 +67,9 @@ def parse_input(raw_data):
     return dirs
 
 
-# Part 1 Solution
 dirs = parse_input(raw_data)
+
+# Part 1 Solution
 result = 0
 
 for dir in dirs.keys():
@@ -80,3 +81,17 @@ for dir in dirs.keys():
 print(result)
 
 # Part 2 Solution
+FILESYSTEM = 70000000
+UPDATE_SPACE = 30000000
+SPACE_NEEDED = UPDATE_SPACE - (FILESYSTEM - dirs["/"].total_size())
+# print(SPACE_NEEDED)
+
+removed_dir = dirs["/"].total_size()
+
+for dir in dirs.keys():
+    dir_size = dirs[dir].total_size()
+
+    if dir_size > SPACE_NEEDED and dir_size < removed_dir:
+        removed_dir = dir_size
+
+print(removed_dir)
