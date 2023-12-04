@@ -29,7 +29,6 @@ print(score)
 score = 0
 
 for l1 in range(0, len(data), 3):
-
     for i in data[l1]:
         if i in data[l1 + 1] and i in data[l1 + 2]:
             if i.isupper():

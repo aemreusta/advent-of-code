@@ -5,7 +5,6 @@ f.close()
 
 
 def dif_char(chars: list, package_length: int):
-
     for i in range(package_length - 1):
         if chars[i] in chars[i + 1 :]:
             return False
@@ -17,7 +16,6 @@ def run_task(data: list, package_legnth: int):
     pos = 0
 
     for i in range(len(data) - (package_legnth + 1)):
-
         if dif_char(data[i : i + package_legnth], package_legnth) is True:
             # print(i + 4, data[i : i + 4])
             pos = i + package_legnth

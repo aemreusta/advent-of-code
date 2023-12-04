@@ -30,7 +30,6 @@ for line in data[MOVE_LINE_NUM - 1 :]:
     edited_moves = []
 
     for word in line.split():
-
         try:
             edited_moves.append(int(word))
 

@@ -7,7 +7,6 @@ f.close()
 score = 0
 
 for round in data:
-
     if round == "A X":
         score += 4
 
@@ -42,7 +41,6 @@ print(score)
 result_scores = 0
 
 for round in data:
-
     if round[2] == "X":
         scores = {"A": 3, "B": 1, "C": 2}
         result_scores += scores.get(round[0])
