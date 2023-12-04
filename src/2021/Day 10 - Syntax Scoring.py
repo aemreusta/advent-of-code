@@ -11,7 +11,6 @@ for idx, line in enumerate(data):
     tmp_stack = []
 
     for chx in line:
-
         if chx in ["(", "[", "<", "{"]:
             tmp_stack.append(chx)
 
@@ -46,11 +45,9 @@ for idx in reversed(corrupted_lines.keys()):
 scores = []
 
 for line in data:
-
     tmp_stack = []
 
     for chx in line:
-
         if chx in ["(", "[", "<", "{"]:
             tmp_stack.append(chx)
 
@@ -60,7 +57,6 @@ for line in data:
     score = 0
 
     for chx in reversed(tmp_stack):
-
         if chx == "(":
             score = score * 5 + 1
 

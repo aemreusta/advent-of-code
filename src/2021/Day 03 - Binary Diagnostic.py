@@ -33,7 +33,6 @@ line_length = len(data[0])
 o2_list, co2_list = data.copy(), data.copy()
 
 for i in range(line_length):
-
     o2_bit, co2_bit = {"0": 0, "1": 0}, {"0": 0, "1": 0}
     o2, co2 = "0", "0"
 
@@ -47,7 +46,6 @@ for i in range(line_length):
         o2_list = [n for n in o2_list if n[i] == o2]
 
     if len(co2_list) != 1:
-
         for number in co2_list:
             co2_bit[number[i]] += 1
 

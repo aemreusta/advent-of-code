@@ -9,7 +9,6 @@ f.close()
 
 # Part 1 Solution
 def neighbor_indices(matrix: np.ndarray, i: int, j: int) -> Iterator[tuple[int, int]]:
-
     for i_off in [-1, 0, 1]:
         for j_off in [-1, 0, 1]:
             i_new = i + i_off

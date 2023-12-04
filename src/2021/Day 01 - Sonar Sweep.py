@@ -16,7 +16,6 @@ print(count)
 count = 0
 
 for i in range(len(list)):
-
     if sum(list[i : i + 3]) < sum(list[(i + 1) : (i + 1) + 3]):
         count += 1
 

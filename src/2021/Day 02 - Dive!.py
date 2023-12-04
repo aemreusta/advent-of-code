@@ -7,7 +7,6 @@ f.close()
 depth, horizontal = 0, 0
 
 for command, value in list:
-
     if command == "forward":
         horizontal += int(value)
 
@@ -23,7 +22,6 @@ print(horizontal * depth)
 depth, horizontal, aim = 0, 0, 0
 
 for command, value in list:
-
     if command == "forward":
         horizontal += int(value)
         depth += int(value) * aim
