@@ -2,6 +2,7 @@ import argparse
 import time
 import re
 
+
 # Part 1 Solution
 def part_one_solution(data):
     part_sum = 0
@@ -28,11 +29,12 @@ def part_one_solution(data):
                 continue
 
         bingo = sum(count_dict.values())
-        part_sum += int(2**(bingo-1))
-        
+        part_sum += int(2 ** (bingo - 1))
+
         # print(count_dict, bingo, part_sum)
 
     return part_sum
+
 
 # Part 2 Solution
 def part_two_solution(data):
@@ -40,7 +42,7 @@ def part_two_solution(data):
 
     cards_dict = {}
     pattern = re.compile(r"(\d+):")
-    
+
     for line in data:
         card_no = pattern.search(line)
 
@@ -70,9 +72,9 @@ def part_two_solution(data):
         bingo = sum(count_dict.values())
 
         if bingo > 0:
-            for i in range(card_no+1, card_no+bingo+1):
+            for i in range(card_no + 1, card_no + bingo + 1):
                 if i in cards_dict:
-                    cards_dict[i] += 1*cards_dict[card_no]
+                    cards_dict[i] += 1 * cards_dict[card_no]
 
             # print(card_no, i, bingo, cards_dict)
 

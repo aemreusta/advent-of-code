@@ -40,13 +40,12 @@ def h_flood(x: int, y: int, m: int, engine_map) -> str:
     # Check boundaries
     if y < 0 or y >= len(engine_map) or x < 0 or x >= len(engine_map[y]):
         return ""
-    
+
     if not engine_map[y][x].isnumeric():
         return ""
 
     flood = h_flood(x + m, y, m, engine_map)
     return f'{flood if m < 0 else ""}{engine_map[y][x]}{flood if m > 0 else ""}'
-
 
 
 # Function to get surrounding numbers
